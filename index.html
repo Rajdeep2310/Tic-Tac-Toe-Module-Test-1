@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Module Test 1</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          ROCK<br />
+          PAPER<br />
+          SCISSORS
+        </h1>
+      </header>
+      <div class="score_details_cs">
+        <p>
+          Computer <br />
+          Score
+        </p>
+        <p class="score_number_cs">00</p>
+      </div>
+      <div class="score_details_ys">
+        <p>
+          Your <br />
+          Score
+        </p>
+        <p class="score_number_ys">00</p>
+      </div>
+    </div>
+
+    <div class="game">
+      <!-- <img class="line1" src="./img/bg-triangle.svg" alt="" /> -->
+      <button class="user-btn" data-choice="rock">
+        <div class="choice rock">
+          <img class="hand-signs" src="./img/rock.png" alt="Rock" />
+        </div>
+      </button>
+      <button class="user-btn" data-choice="scissor">
+        <div class="choice scissor">
+          <img class="hand-signs" src="./img/scissor.png" alt="Scissor" />
+        </div>
+      </button>
+      <button class="user-btn" data-choice="paper">
+        <div class="choice paper">
+          <img class="hand-signs" src="./img/paper.png" alt="Paper" />
+        </div>
+      </button>
+    </div>
+
+    <div class="results winner hidden">
+      <h2 class="results_heading">YOU PICKED</h2>
+      <h2 class="results_heading">PC PICKED</h2>
+      <div class="results_result"></div>
+      <div class="results_result"></div>
+      <div class="results_winner hidden">
+        <h1 class="results_text" style="margin-left:10px;"></h1>
+        <p class="results_text" style="margin-left: 20px">AGAINST PC</p>
+        <button class="rule2" style="position: absolute; margin-left:550px; margin-top:60px;">Rules</button>
+        <button class="play_again">PLAY AGAIN</button>
+        <button class="next-btn"><a href="./winner.html" style="text-decoration:none;color:white;">Next</a></button>
+      </div>
+    </div>
+
+    <div class="instruction">
+      <button class="rules">Rules</button>
+      <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content" style="width: 300px; height: 400px">
+          <h2>Game Rules</h2>
+          <ul>
+            <li>
+              Rock beats scissors, scissors beat paper, and paper beats rock.<br />
+            </li>
+            <li>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”<br />
+            </li>
+            <li>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time <br />
+            </li>
+            <li>
+              If both players lay down the same hand, each player lays down
+              another hand.
+            </li>
+          </ul>
+
+          <button class="close-btn" onclick="closePopup()" style="color: white">
+            ✖
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
